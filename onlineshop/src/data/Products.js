@@ -1,7 +1,7 @@
 import handsfree from '../assests/q1.jpg';
 import cable from '../assests/q2.jpg';
 import mobile from '../assests/q3.jpg';
-import phone from '../assests/q4.svg';
+import phone from '../assests/q4.webp';
 
 
 
