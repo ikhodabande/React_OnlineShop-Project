@@ -1,4 +1,8 @@
-const PRODUCTS = [
+
+
+
+
+export const PRODUCTS = [
   {
     id : 1 ,
     productName : mobile ,
