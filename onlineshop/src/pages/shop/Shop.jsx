@@ -8,7 +8,7 @@ function Shop() {
     <>
     <h1>Shop</h1>
     <div className="row">
-      {PRODUCTS.map((productData)=> <Products data={productData} />)}
+      {PRODUCTS.map((productData)=> <Products key={productData.id} data={productData} />)}
     </div>
     </>
   )
