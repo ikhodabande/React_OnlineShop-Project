@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Products = ({data}) => {
+  const [cartIdtems , setCartItems] = useState({})
   const {id ,productImage , productName , price} = data
   return (
     <div className="col-3">
