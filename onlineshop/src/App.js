@@ -6,10 +6,11 @@ import Navbar from './components/Navbar';
 import { ShopContextProvider } from './context/shopContext';
 
 
+
 function App() {
   return (
     <div className="App">
-      <ShopContextProvider>
+    <ShopContextProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -17,7 +18,7 @@ function App() {
           <Route  path="/cart" element={<Cart />} />
         </Routes>
       </Router>
-      </ShopContextProvider>
+     </ShopContextProvider>
     </div>
   );
 }
