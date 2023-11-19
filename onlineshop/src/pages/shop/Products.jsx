@@ -15,11 +15,7 @@ const Products = ({data}) => {
       <p>price : {price}$</p>
       <button className="btn btn-info btn-sm " onClick={()=>addToCart(id)}>+</button>
       <span className='mx-1'>{cartItems?.filter((row)=> row.id === id)[0]?.count}</span>
-     {isInCart && <button 
-      className="btn btn-info btn-sm "
-       onClick={()=>removeFromCart(id)}>-
-       </button>
-      }
+     { isInCart && <button className="btn btn-info btn-sm " onClick={()=>removeFromCart(id)}>-</button> }
     </div>
   )
 }
