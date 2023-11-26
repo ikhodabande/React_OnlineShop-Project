@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 const UseCart = () => {
-  const [cartItems , setCartItems] = useState([])
+  const [cartItems , setCartItems] = useState([]);
 
   const addToCart = (itemId) => {
     if(!cartItems?.find((item)=> item.id === itemId))
