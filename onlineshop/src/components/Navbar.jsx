@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import { ShopContext } from '../context/shopContext'
-
+import './Navbar.css'
 
 function Navbar() {
   const {cartItems} = useContext(ShopContext)
@@ -21,7 +21,7 @@ function Navbar() {
           <li className="nav-item">
           <Link to="/cart" className='nav-link' >
             <FontAwesomeIcon icon={faShoppingCart} />
-            <span>{itemCount}</span>
+            {itemCount  > 0 && <span className='cart-items-count'>{itemCount}</span> }
             </Link>
             </li>
         </ul>
