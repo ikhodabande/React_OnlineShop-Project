@@ -1,11 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 const Welcome=()=> {
-  const [showWelcome , setShowWelcome] = useState(true)
+  const [showWelcome , setShowWelcome] = useState()
+
+  useEffect(()=>{
+    const data = localStorage.getItem("show_app_intro")
+    setShowWelcome(JSON.parse(data) ?? true)
+  
+  },[])
+
   const onHideWelcome=()=>{
-    setShowWelcome(false)
+     setShowWelcome(false)
+     localStorage.setItem("show_app_intro" , JSON.stringify(false))
   }
 
   return (
