@@ -6,7 +6,7 @@ const UseCart = () => {
   useEffect(()=>{
     const data = localStorage.getItem("Mehrabanstyle_cart")
     setCartItems(!! JSON.parse(data) ? JSON.parse(data) : [])
-  })
+  },[])
 
   useEffect(()=>{
     if(cartItems !== undefined)

@@ -8,6 +8,6 @@ export const ShopContext = createContext({
   removeFromCart : ()=>{},
 });
 
-export const ShopContextProvider = (props)=>{
+export const ShopContextProvider =(props)=>{
   return <ShopContext.Provider value={UseCart()}>{props.children}</ShopContext.Provider>
 }
