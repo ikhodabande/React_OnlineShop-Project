@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 
 const UseCart = () => {
-  const [cartItems , setCartItems] = useState([]);
+  const [cartItems , setCartItems] = useState();
 
   useEffect(()=>{
     const data = localStorage.getItem("Mehrabanstyle_cart")
-    setCartItems(JSON.parse(data))
+    setCartItems(!! JSON.parse(data) ? JSON.parse(data) : [])
   })
 
   useEffect(()=>{
+    if(cartItems !== undefined)
     localStorage.setItem("Mehrabanstyle_cart" , JSON.stringify(cartItems))
   },[cartItems])
 
