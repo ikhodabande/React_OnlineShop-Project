@@ -1,7 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const UseCart = () => {
   const [cartItems , setCartItems] = useState([]);
+
+  useEffect(()=>{
+    const data = localStorage.getItem("Mehrabanstyle_cart")
+    setCartItems(JSON.parse(data))
+  })
+
+  useEffect(()=>{
+    localStorage.setItem("Mehrabanstyle_cart" , JSON.stringify(cartItems))
+  },[cartItems])
 
   const addToCart = (itemId) => {
     if(!cartItems?.find((item)=> item.id === itemId))
