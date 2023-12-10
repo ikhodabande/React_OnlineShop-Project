@@ -35,10 +35,17 @@ const UseCart = () => {
 
   }
 
+  const resetCart =()=>{
+    setCartItems();
+    localStorage.removeItem("Mehrabanstyle_cart")
+
+  }
 
 
 
-  return ({cartItems , addToCart , removeFromCart});
+
+
+  return ({cartItems , addToCart , removeFromCart, resetCart});
 }
  
 export default UseCart;

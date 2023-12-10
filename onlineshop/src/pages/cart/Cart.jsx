@@ -4,7 +4,7 @@ import {ShopContext} from '../../context/shopContext';
 import Products from '../shop/Products';
 
 const Cart = () => {
-  const {cartItems} = useContext(ShopContext);
+  const {cartItems, resetCart} = useContext(ShopContext);
   return (
     <>
     <h1 className='mt-1'>Your cart items</h1>
@@ -14,7 +14,7 @@ const Cart = () => {
         return <Products data={p} ></Products>
       })}
     </div>
-    <button className='btn btn-warnning m-3' onClick={}>Reset</button>
+    <button className='btn btn-warnning m-3' onClick={resetCart}>Reset</button>
     </>
   )
 }

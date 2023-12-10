@@ -6,6 +6,7 @@ export const ShopContext = createContext({
   cartItems : null,
   addToCart : ()=>{},
   removeFromCart : ()=>{},
+  resetCart : ()=>{},
 });
 
 export const ShopContextProvider =(props)=>{
