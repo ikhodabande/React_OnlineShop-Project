@@ -10,7 +10,7 @@ const Cart = () => {
     <h1 className='mt-1'>Your cart items</h1>
     <div className="row">
       {PRODUCTS.map((p)=>{
-        if(cartItems.find((i)=> i.id === p.id  &&  i.count >0))
+        if(cartItems?.find((i)=> i.id === p.id  &&  i.count >0))
         return <Products data={p} ></Products>
       })}
     </div>
