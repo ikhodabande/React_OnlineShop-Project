@@ -14,7 +14,7 @@ const Cart = () => {
         return <Products data={p} ></Products>
       })}
     </div>
-    <button className='btn btn-warnning m-3' onClick={resetCart}>Reset</button>
+    <button className='btn btn-warning m-3' onClick={resetCart}>Reset</button>
     </>
   )
 }
